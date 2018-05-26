@@ -11,3 +11,5 @@ C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\3erExa
 C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\BAse_log.ldf
 C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.Actors.resources
 C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.RoleTypes.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.FilmGenres.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.Producers.resources

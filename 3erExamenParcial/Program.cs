@@ -16,7 +16,7 @@ namespace _3erExamenParcial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RoleTypes());
+            Application.Run(new Producers());
         }
     }
 }
