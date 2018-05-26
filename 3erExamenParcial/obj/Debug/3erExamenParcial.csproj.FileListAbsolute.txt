@@ -1,0 +1,13 @@
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\BAse.mdf
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\3erExamenParcial.exe.config
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\3erExamenParcial.exe
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\3erExamenParcial.pdb
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\3erExamenParcial.csprojResolveAssemblyReference.cache
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.Properties.Resources.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\3erExamenParcial.csproj.GenerateResource.Cache
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\3erExamenParcial.csproj.CoreCompileInputs.cache
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\3erExamenParcial.exe
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\3erExamenParcial.pdb
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\BAse_log.ldf
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.Actors.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.RoleTypes.resources
