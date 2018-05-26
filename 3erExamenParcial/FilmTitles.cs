@@ -127,6 +127,7 @@ namespace _3erExamenParcial
             this.filmGenreIDComboBox.Enabled = true;
             this.filmCertificateIDComboBox.Enabled = true;
             this.filmAditionalInfoTextBox.Enabled = true;
+            this.editar.Enabled = false;
         }
 
         private void filmTitlesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

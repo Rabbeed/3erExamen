@@ -62,6 +62,22 @@
             this.roleTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.characterNameTextBox = new System.Windows.Forms.TextBox();
             this.characterDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.filmTitlesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.filmTitleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filmTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filmAditionalInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.actorsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.actorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actorFullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.roleTypesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.roleTypeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             filmTitleIDLabel = new System.Windows.Forms.Label();
             actorIDLabel = new System.Windows.Forms.Label();
             roleTypeLabel = new System.Windows.Forms.Label();
@@ -75,6 +91,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.filmTitlesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleTypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmTitlesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actorsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleTypesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // filmTitleIDLabel
@@ -178,7 +200,7 @@
             this.filmActorRoleBindingNavigator.MovePreviousItem = null;
             this.filmActorRoleBindingNavigator.Name = "filmActorRoleBindingNavigator";
             this.filmActorRoleBindingNavigator.PositionItem = null;
-            this.filmActorRoleBindingNavigator.Size = new System.Drawing.Size(566, 25);
+            this.filmActorRoleBindingNavigator.Size = new System.Drawing.Size(860, 25);
             this.filmActorRoleBindingNavigator.TabIndex = 0;
             this.filmActorRoleBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -227,7 +249,7 @@
             this.filmActorRoleDataGridView.Location = new System.Drawing.Point(12, 155);
             this.filmActorRoleDataGridView.Name = "filmActorRoleDataGridView";
             this.filmActorRoleDataGridView.ReadOnly = true;
-            this.filmActorRoleDataGridView.Size = new System.Drawing.Size(545, 207);
+            this.filmActorRoleDataGridView.Size = new System.Drawing.Size(485, 224);
             this.filmActorRoleDataGridView.TabIndex = 1;
             this.filmActorRoleDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.filmActorRoleDataGridView_CellClick);
             this.filmActorRoleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.filmActorRoleDataGridView_CellContentClick);
@@ -269,7 +291,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 368);
+            this.button1.Location = new System.Drawing.Point(12, 385);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -279,7 +301,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(482, 368);
+            this.button2.Location = new System.Drawing.Point(773, 385);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -295,7 +317,7 @@
             this.filmTitleIDComboBox.FormattingEnabled = true;
             this.filmTitleIDComboBox.Location = new System.Drawing.Point(150, 22);
             this.filmTitleIDComboBox.Name = "filmTitleIDComboBox";
-            this.filmTitleIDComboBox.Size = new System.Drawing.Size(375, 21);
+            this.filmTitleIDComboBox.Size = new System.Drawing.Size(323, 21);
             this.filmTitleIDComboBox.TabIndex = 5;
             this.filmTitleIDComboBox.ValueMember = "FilmTitleID";
             // 
@@ -312,7 +334,7 @@
             this.actorIDComboBox.FormattingEnabled = true;
             this.actorIDComboBox.Location = new System.Drawing.Point(150, 49);
             this.actorIDComboBox.Name = "actorIDComboBox";
-            this.actorIDComboBox.Size = new System.Drawing.Size(375, 21);
+            this.actorIDComboBox.Size = new System.Drawing.Size(323, 21);
             this.actorIDComboBox.TabIndex = 7;
             this.actorIDComboBox.ValueMember = "ActorID";
             // 
@@ -329,7 +351,7 @@
             this.roleTypeComboBox.FormattingEnabled = true;
             this.roleTypeComboBox.Location = new System.Drawing.Point(150, 76);
             this.roleTypeComboBox.Name = "roleTypeComboBox";
-            this.roleTypeComboBox.Size = new System.Drawing.Size(375, 21);
+            this.roleTypeComboBox.Size = new System.Drawing.Size(323, 21);
             this.roleTypeComboBox.TabIndex = 9;
             this.roleTypeComboBox.ValueMember = "RoleTypeID";
             // 
@@ -343,7 +365,7 @@
             this.characterNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.filmActorRoleBindingSource, "CharacterName", true));
             this.characterNameTextBox.Location = new System.Drawing.Point(150, 103);
             this.characterNameTextBox.Name = "characterNameTextBox";
-            this.characterNameTextBox.Size = new System.Drawing.Size(375, 20);
+            this.characterNameTextBox.Size = new System.Drawing.Size(323, 20);
             this.characterNameTextBox.TabIndex = 11;
             // 
             // characterDescriptionTextBox
@@ -351,14 +373,160 @@
             this.characterDescriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.filmActorRoleBindingSource, "CharacterDescription", true));
             this.characterDescriptionTextBox.Location = new System.Drawing.Point(150, 129);
             this.characterDescriptionTextBox.Name = "characterDescriptionTextBox";
-            this.characterDescriptionTextBox.Size = new System.Drawing.Size(375, 20);
+            this.characterDescriptionTextBox.Size = new System.Drawing.Size(323, 20);
             this.characterDescriptionTextBox.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(508, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Titles";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.filmTitleIDDataGridViewTextBoxColumn,
+            this.filmTitleDataGridViewTextBoxColumn,
+            this.filmAditionalInfoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.filmTitlesBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(511, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(337, 121);
+            this.dataGridView1.TabIndex = 15;
+            // 
+            // filmTitlesBindingSource1
+            // 
+            this.filmTitlesBindingSource1.DataMember = "FilmTitles";
+            this.filmTitlesBindingSource1.DataSource = this.bd;
+            // 
+            // filmTitleIDDataGridViewTextBoxColumn
+            // 
+            this.filmTitleIDDataGridViewTextBoxColumn.DataPropertyName = "FilmTitleID";
+            this.filmTitleIDDataGridViewTextBoxColumn.HeaderText = "FilmTitleID";
+            this.filmTitleIDDataGridViewTextBoxColumn.Name = "filmTitleIDDataGridViewTextBoxColumn";
+            this.filmTitleIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // filmTitleDataGridViewTextBoxColumn
+            // 
+            this.filmTitleDataGridViewTextBoxColumn.DataPropertyName = "FilmTitle";
+            this.filmTitleDataGridViewTextBoxColumn.HeaderText = "FilmTitle";
+            this.filmTitleDataGridViewTextBoxColumn.Name = "filmTitleDataGridViewTextBoxColumn";
+            this.filmTitleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // filmAditionalInfoDataGridViewTextBoxColumn
+            // 
+            this.filmAditionalInfoDataGridViewTextBoxColumn.DataPropertyName = "FilmAditionalInfo";
+            this.filmAditionalInfoDataGridViewTextBoxColumn.HeaderText = "FilmAditionalInfo";
+            this.filmAditionalInfoDataGridViewTextBoxColumn.Name = "filmAditionalInfoDataGridViewTextBoxColumn";
+            this.filmAditionalInfoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.actorIDDataGridViewTextBoxColumn,
+            this.actorFullNameDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.actorsBindingSource1;
+            this.dataGridView2.Location = new System.Drawing.Point(511, 174);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(337, 104);
+            this.dataGridView2.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(508, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Actors";
+            // 
+            // actorsBindingSource1
+            // 
+            this.actorsBindingSource1.DataMember = "Actors";
+            this.actorsBindingSource1.DataSource = this.bd;
+            // 
+            // actorIDDataGridViewTextBoxColumn
+            // 
+            this.actorIDDataGridViewTextBoxColumn.DataPropertyName = "ActorID";
+            this.actorIDDataGridViewTextBoxColumn.HeaderText = "ActorID";
+            this.actorIDDataGridViewTextBoxColumn.Name = "actorIDDataGridViewTextBoxColumn";
+            this.actorIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // actorFullNameDataGridViewTextBoxColumn
+            // 
+            this.actorFullNameDataGridViewTextBoxColumn.DataPropertyName = "ActorFullName";
+            this.actorFullNameDataGridViewTextBoxColumn.HeaderText = "ActorFullName";
+            this.actorFullNameDataGridViewTextBoxColumn.Name = "actorFullNameDataGridViewTextBoxColumn";
+            this.actorFullNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.roleTypeIDDataGridViewTextBoxColumn,
+            this.roleTypeDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.roleTypesBindingSource1;
+            this.dataGridView3.Location = new System.Drawing.Point(511, 304);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(337, 75);
+            this.dataGridView3.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(508, 288);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Roles";
+            // 
+            // roleTypesBindingSource1
+            // 
+            this.roleTypesBindingSource1.DataMember = "RoleTypes";
+            this.roleTypesBindingSource1.DataSource = this.bd;
+            // 
+            // roleTypeIDDataGridViewTextBoxColumn
+            // 
+            this.roleTypeIDDataGridViewTextBoxColumn.DataPropertyName = "RoleTypeID";
+            this.roleTypeIDDataGridViewTextBoxColumn.HeaderText = "RoleTypeID";
+            this.roleTypeIDDataGridViewTextBoxColumn.Name = "roleTypeIDDataGridViewTextBoxColumn";
+            this.roleTypeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roleTypeDataGridViewTextBoxColumn
+            // 
+            this.roleTypeDataGridViewTextBoxColumn.DataPropertyName = "RoleType";
+            this.roleTypeDataGridViewTextBoxColumn.HeaderText = "RoleType";
+            this.roleTypeDataGridViewTextBoxColumn.Name = "roleTypeDataGridViewTextBoxColumn";
+            this.roleTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FilmActorRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 403);
+            this.ClientSize = new System.Drawing.Size(860, 414);
+            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(filmTitleIDLabel);
             this.Controls.Add(this.filmTitleIDComboBox);
             this.Controls.Add(actorIDLabel);
@@ -386,6 +554,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.filmTitlesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actorsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleTypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmTitlesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actorsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleTypesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,5 +594,21 @@
         private System.Windows.Forms.BindingSource actorsBindingSource;
         private bdTableAdapters.RoleTypesTableAdapter roleTypesTableAdapter;
         private System.Windows.Forms.BindingSource roleTypesBindingSource;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filmTitleIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filmTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filmAditionalInfoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource filmTitlesBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actorIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actorFullNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource actorsBindingSource1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleTypeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource roleTypesBindingSource1;
+        private System.Windows.Forms.Label label3;
     }
 }

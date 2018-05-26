@@ -70,17 +70,28 @@
             this.filmReleaseDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.filmDurationTextBox = new System.Windows.Forms.TextBox();
             this.filmGenreIDComboBox = new System.Windows.Forms.ComboBox();
+            this.filmGenresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.filmGenresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.filmGenresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmCertificateIDComboBox = new System.Windows.Forms.ComboBox();
+            this.filmCertificateBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.filmCertificateBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.filmAditionalInfoTextBox = new System.Windows.Forms.TextBox();
             this.filmGenresTableAdapter = new _3erExamenParcial.bdTableAdapters.FilmGenresTableAdapter();
             this.filmCertificateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmCertificateTableAdapter = new _3erExamenParcial.bdTableAdapters.FilmCertificateTableAdapter();
             this.editar = new System.Windows.Forms.Button();
-            this.filmGenresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmCertificateBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.filmGenresBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.genreIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.filmCertificateBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.certificateIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.certificateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             filmTitleIDLabel = new System.Windows.Forms.Label();
             filmTitleLabel = new System.Windows.Forms.Label();
             filmStoryLabel = new System.Windows.Forms.Label();
@@ -95,12 +106,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.bd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmTitlesProducerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmTitlesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // filmTitleIDLabel
@@ -142,7 +158,7 @@
             // filmDurationLabel
             // 
             filmDurationLabel.AutoSize = true;
-            filmDurationLabel.Location = new System.Drawing.Point(483, 36);
+            filmDurationLabel.Location = new System.Drawing.Point(511, 34);
             filmDurationLabel.Name = "filmDurationLabel";
             filmDurationLabel.Size = new System.Drawing.Size(71, 13);
             filmDurationLabel.TabIndex = 47;
@@ -151,7 +167,7 @@
             // filmGenreIDLabel
             // 
             filmGenreIDLabel.AutoSize = true;
-            filmGenreIDLabel.Location = new System.Drawing.Point(483, 62);
+            filmGenreIDLabel.Location = new System.Drawing.Point(511, 60);
             filmGenreIDLabel.Name = "filmGenreIDLabel";
             filmGenreIDLabel.Size = new System.Drawing.Size(74, 13);
             filmGenreIDLabel.TabIndex = 49;
@@ -160,7 +176,7 @@
             // filmCertificateIDLabel
             // 
             filmCertificateIDLabel.AutoSize = true;
-            filmCertificateIDLabel.Location = new System.Drawing.Point(483, 89);
+            filmCertificateIDLabel.Location = new System.Drawing.Point(511, 87);
             filmCertificateIDLabel.Name = "filmCertificateIDLabel";
             filmCertificateIDLabel.Size = new System.Drawing.Size(92, 13);
             filmCertificateIDLabel.TabIndex = 51;
@@ -169,7 +185,7 @@
             // filmAditionalInfoLabel
             // 
             filmAditionalInfoLabel.AutoSize = true;
-            filmAditionalInfoLabel.Location = new System.Drawing.Point(483, 116);
+            filmAditionalInfoLabel.Location = new System.Drawing.Point(511, 114);
             filmAditionalInfoLabel.Name = "filmAditionalInfoLabel";
             filmAditionalInfoLabel.Size = new System.Drawing.Size(92, 13);
             filmAditionalInfoLabel.TabIndex = 53;
@@ -192,7 +208,7 @@
             this.filmTitlesBindingNavigator.MovePreviousItem = null;
             this.filmTitlesBindingNavigator.Name = "filmTitlesBindingNavigator";
             this.filmTitlesBindingNavigator.PositionItem = null;
-            this.filmTitlesBindingNavigator.Size = new System.Drawing.Size(914, 25);
+            this.filmTitlesBindingNavigator.Size = new System.Drawing.Size(934, 25);
             this.filmTitlesBindingNavigator.TabIndex = 0;
             this.filmTitlesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -236,7 +252,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 403);
+            this.button1.Location = new System.Drawing.Point(31, 411);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 23);
             this.button1.TabIndex = 18;
@@ -246,7 +262,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(138, 403);
+            this.button2.Location = new System.Drawing.Point(157, 411);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 23);
             this.button2.TabIndex = 19;
@@ -256,7 +272,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(264, 403);
+            this.button3.Location = new System.Drawing.Point(283, 411);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(126, 23);
             this.button3.TabIndex = 20;
@@ -266,7 +282,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(390, 403);
+            this.button4.Location = new System.Drawing.Point(409, 411);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 23);
             this.button4.TabIndex = 21;
@@ -276,7 +292,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(516, 403);
+            this.button5.Location = new System.Drawing.Point(535, 411);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(126, 23);
             this.button5.TabIndex = 22;
@@ -286,7 +302,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(768, 403);
+            this.button6.Location = new System.Drawing.Point(787, 411);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(126, 23);
             this.button6.TabIndex = 23;
@@ -313,7 +329,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(642, 403);
+            this.button7.Location = new System.Drawing.Point(661, 411);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(126, 23);
             this.button7.TabIndex = 39;
@@ -349,7 +365,7 @@
             this.filmTitlesDataGridView.Location = new System.Drawing.Point(29, 177);
             this.filmTitlesDataGridView.Name = "filmTitlesDataGridView";
             this.filmTitlesDataGridView.ReadOnly = true;
-            this.filmTitlesDataGridView.Size = new System.Drawing.Size(847, 220);
+            this.filmTitlesDataGridView.Size = new System.Drawing.Size(586, 220);
             this.filmTitlesDataGridView.TabIndex = 39;
             this.filmTitlesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.filmTitlesDataGridView_CellClick);
             // 
@@ -444,7 +460,7 @@
             // filmDurationTextBox
             // 
             this.filmDurationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.filmTitlesBindingSource, "FilmDuration", true));
-            this.filmDurationTextBox.Location = new System.Drawing.Point(585, 33);
+            this.filmDurationTextBox.Location = new System.Drawing.Point(613, 31);
             this.filmDurationTextBox.Name = "filmDurationTextBox";
             this.filmDurationTextBox.Size = new System.Drawing.Size(289, 20);
             this.filmDurationTextBox.TabIndex = 48;
@@ -455,11 +471,16 @@
             this.filmGenreIDComboBox.DataSource = this.filmGenresBindingSource2;
             this.filmGenreIDComboBox.DisplayMember = "GenreID";
             this.filmGenreIDComboBox.FormattingEnabled = true;
-            this.filmGenreIDComboBox.Location = new System.Drawing.Point(585, 59);
+            this.filmGenreIDComboBox.Location = new System.Drawing.Point(613, 57);
             this.filmGenreIDComboBox.Name = "filmGenreIDComboBox";
             this.filmGenreIDComboBox.Size = new System.Drawing.Size(289, 21);
             this.filmGenreIDComboBox.TabIndex = 50;
             this.filmGenreIDComboBox.ValueMember = "GenreID";
+            // 
+            // filmGenresBindingSource2
+            // 
+            this.filmGenresBindingSource2.DataMember = "FilmGenres";
+            this.filmGenresBindingSource2.DataSource = this.bd;
             // 
             // filmGenresBindingSource1
             // 
@@ -477,11 +498,16 @@
             this.filmCertificateIDComboBox.DataSource = this.filmCertificateBindingSource2;
             this.filmCertificateIDComboBox.DisplayMember = "CertificateID";
             this.filmCertificateIDComboBox.FormattingEnabled = true;
-            this.filmCertificateIDComboBox.Location = new System.Drawing.Point(585, 86);
+            this.filmCertificateIDComboBox.Location = new System.Drawing.Point(613, 84);
             this.filmCertificateIDComboBox.Name = "filmCertificateIDComboBox";
             this.filmCertificateIDComboBox.Size = new System.Drawing.Size(289, 21);
             this.filmCertificateIDComboBox.TabIndex = 52;
             this.filmCertificateIDComboBox.ValueMember = "CertificateID";
+            // 
+            // filmCertificateBindingSource2
+            // 
+            this.filmCertificateBindingSource2.DataMember = "FilmCertificate";
+            this.filmCertificateBindingSource2.DataSource = this.bd;
             // 
             // filmCertificateBindingSource1
             // 
@@ -491,7 +517,7 @@
             // filmAditionalInfoTextBox
             // 
             this.filmAditionalInfoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.filmTitlesBindingSource, "FilmAditionalInfo", true));
-            this.filmAditionalInfoTextBox.Location = new System.Drawing.Point(585, 113);
+            this.filmAditionalInfoTextBox.Location = new System.Drawing.Point(613, 111);
             this.filmAditionalInfoTextBox.Name = "filmAditionalInfoTextBox";
             this.filmAditionalInfoTextBox.Size = new System.Drawing.Size(289, 20);
             this.filmAditionalInfoTextBox.TabIndex = 54;
@@ -519,21 +545,108 @@
             this.editar.UseVisualStyleBackColor = true;
             this.editar.Click += new System.EventHandler(this.editar_Click);
             // 
-            // filmGenresBindingSource2
+            // label1
             // 
-            this.filmGenresBindingSource2.DataMember = "FilmGenres";
-            this.filmGenresBindingSource2.DataSource = this.bd;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(626, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Genre";
             // 
-            // filmCertificateBindingSource2
+            // dataGridView1
             // 
-            this.filmCertificateBindingSource2.DataMember = "FilmCertificate";
-            this.filmCertificateBindingSource2.DataSource = this.bd;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.genreIDDataGridViewTextBoxColumn,
+            this.genreDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.filmGenresBindingSource3;
+            this.dataGridView1.Location = new System.Drawing.Point(629, 177);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(293, 86);
+            this.dataGridView1.TabIndex = 57;
+            // 
+            // filmGenresBindingSource3
+            // 
+            this.filmGenresBindingSource3.DataMember = "FilmGenres";
+            this.filmGenresBindingSource3.DataSource = this.bd;
+            // 
+            // genreIDDataGridViewTextBoxColumn
+            // 
+            this.genreIDDataGridViewTextBoxColumn.DataPropertyName = "GenreID";
+            this.genreIDDataGridViewTextBoxColumn.HeaderText = "GenreID";
+            this.genreIDDataGridViewTextBoxColumn.Name = "genreIDDataGridViewTextBoxColumn";
+            this.genreIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // genreDataGridViewTextBoxColumn
+            // 
+            this.genreDataGridViewTextBoxColumn.DataPropertyName = "Genre";
+            this.genreDataGridViewTextBoxColumn.HeaderText = "Genre";
+            this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
+            this.genreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.certificateIDDataGridViewTextBoxColumn,
+            this.certificateDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.filmCertificateBindingSource3;
+            this.dataGridView2.Location = new System.Drawing.Point(629, 294);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(293, 103);
+            this.dataGridView2.TabIndex = 59;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(626, 278);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Certificate";
+            // 
+            // bdBindingSource
+            // 
+            this.bdBindingSource.DataSource = this.bd;
+            this.bdBindingSource.Position = 0;
+            // 
+            // filmCertificateBindingSource3
+            // 
+            this.filmCertificateBindingSource3.DataMember = "FilmCertificate";
+            this.filmCertificateBindingSource3.DataSource = this.bdBindingSource;
+            // 
+            // certificateIDDataGridViewTextBoxColumn
+            // 
+            this.certificateIDDataGridViewTextBoxColumn.DataPropertyName = "CertificateID";
+            this.certificateIDDataGridViewTextBoxColumn.HeaderText = "CertificateID";
+            this.certificateIDDataGridViewTextBoxColumn.Name = "certificateIDDataGridViewTextBoxColumn";
+            this.certificateIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // certificateDataGridViewTextBoxColumn
+            // 
+            this.certificateDataGridViewTextBoxColumn.DataPropertyName = "Certificate";
+            this.certificateDataGridViewTextBoxColumn.HeaderText = "Certificate";
+            this.certificateDataGridViewTextBoxColumn.Name = "certificateDataGridViewTextBoxColumn";
+            this.certificateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FilmTitles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 446);
+            this.ClientSize = new System.Drawing.Size(934, 446);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.editar);
             this.Controls.Add(filmTitleIDLabel);
             this.Controls.Add(this.filmTitleIDTextBox);
@@ -571,12 +684,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.bd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmTitlesProducerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmTitlesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmGenresBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmCertificateBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,5 +745,16 @@
         private System.Windows.Forms.Button editar;
         private System.Windows.Forms.BindingSource filmGenresBindingSource2;
         private System.Windows.Forms.BindingSource filmCertificateBindingSource2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genreIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource filmGenresBindingSource3;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn certificateIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn certificateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource filmCertificateBindingSource3;
+        private System.Windows.Forms.BindingSource bdBindingSource;
+        private System.Windows.Forms.Label label2;
     }
 }
