@@ -13,3 +13,13 @@ C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erEx
 C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.RoleTypes.resources
 C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.FilmGenres.resources
 C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.Producers.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\bd.cs
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\bd.Designer.cs
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\bd.xsc
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\bd.xsd
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\bin\Debug\bd.xss
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.FilmTitlesProducers.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.FilmTitles.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.FilmActorRole.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.FilmCertificate.resources
+C:\Users\Rabbeed\source\repos\3erExamenParcial\3erExamenParcial\obj\Debug\_3erExamenParcial.Main.resources

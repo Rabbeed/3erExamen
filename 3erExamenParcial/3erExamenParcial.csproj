@@ -62,11 +62,13 @@
   <ItemGroup>
     <Compile Include="bd.cs">
       <DependentUpon>bd.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="bd.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bd.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Actors.cs">
       <SubType>Form</SubType>
@@ -74,11 +76,41 @@
     <Compile Include="Actors.Designer.cs">
       <DependentUpon>Actors.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilmActorRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmActorRole.Designer.cs">
+      <DependentUpon>FilmActorRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmCertificate.Designer.cs">
+      <DependentUpon>FilmCertificate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FilmGenres.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FilmGenres.Designer.cs">
       <DependentUpon>FilmGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmTitles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmTitles.Designer.cs">
+      <DependentUpon>FilmTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmTitlesProducers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmTitlesProducers.Designer.cs">
+      <DependentUpon>FilmTitlesProducers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Producers.cs">
       <SubType>Form</SubType>
@@ -97,8 +129,23 @@
     <EmbeddedResource Include="Actors.resx">
       <DependentUpon>Actors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FilmActorRole.resx">
+      <DependentUpon>FilmActorRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmCertificate.resx">
+      <DependentUpon>FilmCertificate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FilmGenres.resx">
       <DependentUpon>FilmGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmTitles.resx">
+      <DependentUpon>FilmTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmTitlesProducers.resx">
+      <DependentUpon>FilmTitlesProducers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producers.resx">
       <DependentUpon>Producers.cs</DependentUpon>
@@ -117,14 +164,17 @@
     </EmbeddedResource>
     <None Include="bd.xsc">
       <DependentUpon>bd.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="bd.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>bd.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="bd.xss">
       <DependentUpon>bd.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

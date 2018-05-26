@@ -30,29 +30,29 @@ namespace _3erExamenParcial {
         
         private RoleTypesDataTable tableRoleTypes;
         
-        private FilmsActorRoleDataTable tableFilmsActorRole;
-        
         private FilmTitlesDataTable tableFilmTitles;
         
         private ProducersDataTable tableProducers;
         
         private FilmTitlesProducerDataTable tableFilmTitlesProducer;
         
-        private FilmCertificatesDataTable tableFilmCertificates;
+        private FilmActorRoleDataTable tableFilmActorRole;
         
-        private global::System.Data.DataRelation relationActors_FilmsActorRole;
+        private FilmCertificateDataTable tableFilmCertificate;
         
-        private global::System.Data.DataRelation relationRoleTypes_FilmsActorRole;
+        private global::System.Data.DataRelation relationActors_FilmActorRole;
+        
+        private global::System.Data.DataRelation relationRoleTypes_FilmActorRole;
         
         private global::System.Data.DataRelation relationFilmGenres_FilmTitles;
         
-        private global::System.Data.DataRelation relationFilmsActorRole_FilmTitles;
+        private global::System.Data.DataRelation relationFilmTitles_FilmActorRole;
         
         private global::System.Data.DataRelation relationFilmTitles_FilmTitlesProducer;
         
         private global::System.Data.DataRelation relationProducers_FilmTitlesProducer;
         
-        private global::System.Data.DataRelation relationFilmCertificates_FilmTitles;
+        private global::System.Data.DataRelation relationFilmCertificate_FilmTitles;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -91,9 +91,6 @@ namespace _3erExamenParcial {
                 if ((ds.Tables["RoleTypes"] != null)) {
                     base.Tables.Add(new RoleTypesDataTable(ds.Tables["RoleTypes"]));
                 }
-                if ((ds.Tables["FilmsActorRole"] != null)) {
-                    base.Tables.Add(new FilmsActorRoleDataTable(ds.Tables["FilmsActorRole"]));
-                }
                 if ((ds.Tables["FilmTitles"] != null)) {
                     base.Tables.Add(new FilmTitlesDataTable(ds.Tables["FilmTitles"]));
                 }
@@ -103,8 +100,11 @@ namespace _3erExamenParcial {
                 if ((ds.Tables["FilmTitlesProducer"] != null)) {
                     base.Tables.Add(new FilmTitlesProducerDataTable(ds.Tables["FilmTitlesProducer"]));
                 }
-                if ((ds.Tables["FilmCertificates"] != null)) {
-                    base.Tables.Add(new FilmCertificatesDataTable(ds.Tables["FilmCertificates"]));
+                if ((ds.Tables["FilmActorRole"] != null)) {
+                    base.Tables.Add(new FilmActorRoleDataTable(ds.Tables["FilmActorRole"]));
+                }
+                if ((ds.Tables["FilmCertificate"] != null)) {
+                    base.Tables.Add(new FilmCertificateDataTable(ds.Tables["FilmCertificate"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -158,16 +158,6 @@ namespace _3erExamenParcial {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FilmsActorRoleDataTable FilmsActorRole {
-            get {
-                return this.tableFilmsActorRole;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public FilmTitlesDataTable FilmTitles {
             get {
                 return this.tableFilmTitles;
@@ -198,9 +188,19 @@ namespace _3erExamenParcial {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FilmCertificatesDataTable FilmCertificates {
+        public FilmActorRoleDataTable FilmActorRole {
             get {
-                return this.tableFilmCertificates;
+                return this.tableFilmActorRole;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public FilmCertificateDataTable FilmCertificate {
+            get {
+                return this.tableFilmCertificate;
             }
         }
         
@@ -280,9 +280,6 @@ namespace _3erExamenParcial {
                 if ((ds.Tables["RoleTypes"] != null)) {
                     base.Tables.Add(new RoleTypesDataTable(ds.Tables["RoleTypes"]));
                 }
-                if ((ds.Tables["FilmsActorRole"] != null)) {
-                    base.Tables.Add(new FilmsActorRoleDataTable(ds.Tables["FilmsActorRole"]));
-                }
                 if ((ds.Tables["FilmTitles"] != null)) {
                     base.Tables.Add(new FilmTitlesDataTable(ds.Tables["FilmTitles"]));
                 }
@@ -292,8 +289,11 @@ namespace _3erExamenParcial {
                 if ((ds.Tables["FilmTitlesProducer"] != null)) {
                     base.Tables.Add(new FilmTitlesProducerDataTable(ds.Tables["FilmTitlesProducer"]));
                 }
-                if ((ds.Tables["FilmCertificates"] != null)) {
-                    base.Tables.Add(new FilmCertificatesDataTable(ds.Tables["FilmCertificates"]));
+                if ((ds.Tables["FilmActorRole"] != null)) {
+                    base.Tables.Add(new FilmActorRoleDataTable(ds.Tables["FilmActorRole"]));
+                }
+                if ((ds.Tables["FilmCertificate"] != null)) {
+                    base.Tables.Add(new FilmCertificateDataTable(ds.Tables["FilmCertificate"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -346,12 +346,6 @@ namespace _3erExamenParcial {
                     this.tableRoleTypes.InitVars();
                 }
             }
-            this.tableFilmsActorRole = ((FilmsActorRoleDataTable)(base.Tables["FilmsActorRole"]));
-            if ((initTable == true)) {
-                if ((this.tableFilmsActorRole != null)) {
-                    this.tableFilmsActorRole.InitVars();
-                }
-            }
             this.tableFilmTitles = ((FilmTitlesDataTable)(base.Tables["FilmTitles"]));
             if ((initTable == true)) {
                 if ((this.tableFilmTitles != null)) {
@@ -370,19 +364,25 @@ namespace _3erExamenParcial {
                     this.tableFilmTitlesProducer.InitVars();
                 }
             }
-            this.tableFilmCertificates = ((FilmCertificatesDataTable)(base.Tables["FilmCertificates"]));
+            this.tableFilmActorRole = ((FilmActorRoleDataTable)(base.Tables["FilmActorRole"]));
             if ((initTable == true)) {
-                if ((this.tableFilmCertificates != null)) {
-                    this.tableFilmCertificates.InitVars();
+                if ((this.tableFilmActorRole != null)) {
+                    this.tableFilmActorRole.InitVars();
                 }
             }
-            this.relationActors_FilmsActorRole = this.Relations["Actors_FilmsActorRole"];
-            this.relationRoleTypes_FilmsActorRole = this.Relations["RoleTypes_FilmsActorRole"];
+            this.tableFilmCertificate = ((FilmCertificateDataTable)(base.Tables["FilmCertificate"]));
+            if ((initTable == true)) {
+                if ((this.tableFilmCertificate != null)) {
+                    this.tableFilmCertificate.InitVars();
+                }
+            }
+            this.relationActors_FilmActorRole = this.Relations["Actors_FilmActorRole"];
+            this.relationRoleTypes_FilmActorRole = this.Relations["RoleTypes_FilmActorRole"];
             this.relationFilmGenres_FilmTitles = this.Relations["FilmGenres_FilmTitles"];
-            this.relationFilmsActorRole_FilmTitles = this.Relations["FilmsActorRole_FilmTitles"];
+            this.relationFilmTitles_FilmActorRole = this.Relations["FilmTitles_FilmActorRole"];
             this.relationFilmTitles_FilmTitlesProducer = this.Relations["FilmTitles_FilmTitlesProducer"];
             this.relationProducers_FilmTitlesProducer = this.Relations["Producers_FilmTitlesProducer"];
-            this.relationFilmCertificates_FilmTitles = this.Relations["FilmCertificates_FilmTitles"];
+            this.relationFilmCertificate_FilmTitles = this.Relations["FilmCertificate_FilmTitles"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -399,32 +399,32 @@ namespace _3erExamenParcial {
             base.Tables.Add(this.tableFilmGenres);
             this.tableRoleTypes = new RoleTypesDataTable();
             base.Tables.Add(this.tableRoleTypes);
-            this.tableFilmsActorRole = new FilmsActorRoleDataTable();
-            base.Tables.Add(this.tableFilmsActorRole);
             this.tableFilmTitles = new FilmTitlesDataTable();
             base.Tables.Add(this.tableFilmTitles);
             this.tableProducers = new ProducersDataTable();
             base.Tables.Add(this.tableProducers);
             this.tableFilmTitlesProducer = new FilmTitlesProducerDataTable();
             base.Tables.Add(this.tableFilmTitlesProducer);
-            this.tableFilmCertificates = new FilmCertificatesDataTable();
-            base.Tables.Add(this.tableFilmCertificates);
-            this.relationActors_FilmsActorRole = new global::System.Data.DataRelation("Actors_FilmsActorRole", new global::System.Data.DataColumn[] {
+            this.tableFilmActorRole = new FilmActorRoleDataTable();
+            base.Tables.Add(this.tableFilmActorRole);
+            this.tableFilmCertificate = new FilmCertificateDataTable();
+            base.Tables.Add(this.tableFilmCertificate);
+            this.relationActors_FilmActorRole = new global::System.Data.DataRelation("Actors_FilmActorRole", new global::System.Data.DataColumn[] {
                         this.tableActors.ActorIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFilmsActorRole.ActorIDColumn}, false);
-            this.Relations.Add(this.relationActors_FilmsActorRole);
-            this.relationRoleTypes_FilmsActorRole = new global::System.Data.DataRelation("RoleTypes_FilmsActorRole", new global::System.Data.DataColumn[] {
+                        this.tableFilmActorRole.ActorIDColumn}, false);
+            this.Relations.Add(this.relationActors_FilmActorRole);
+            this.relationRoleTypes_FilmActorRole = new global::System.Data.DataRelation("RoleTypes_FilmActorRole", new global::System.Data.DataColumn[] {
                         this.tableRoleTypes.RoleTypeIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFilmsActorRole.RoleTypeColumn}, false);
-            this.Relations.Add(this.relationRoleTypes_FilmsActorRole);
+                        this.tableFilmActorRole.RoleTypeColumn}, false);
+            this.Relations.Add(this.relationRoleTypes_FilmActorRole);
             this.relationFilmGenres_FilmTitles = new global::System.Data.DataRelation("FilmGenres_FilmTitles", new global::System.Data.DataColumn[] {
                         this.tableFilmGenres.GenreIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableFilmTitles.FilmGenreIDColumn}, false);
             this.Relations.Add(this.relationFilmGenres_FilmTitles);
-            this.relationFilmsActorRole_FilmTitles = new global::System.Data.DataRelation("FilmsActorRole_FilmTitles", new global::System.Data.DataColumn[] {
-                        this.tableFilmsActorRole.FilmTitleIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFilmTitles.FilmTitleIDColumn}, false);
-            this.Relations.Add(this.relationFilmsActorRole_FilmTitles);
+            this.relationFilmTitles_FilmActorRole = new global::System.Data.DataRelation("FilmTitles_FilmActorRole", new global::System.Data.DataColumn[] {
+                        this.tableFilmTitles.FilmTitleIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFilmActorRole.FilmTitleIDColumn}, false);
+            this.Relations.Add(this.relationFilmTitles_FilmActorRole);
             this.relationFilmTitles_FilmTitlesProducer = new global::System.Data.DataRelation("FilmTitles_FilmTitlesProducer", new global::System.Data.DataColumn[] {
                         this.tableFilmTitles.FilmTitleIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableFilmTitlesProducer.FilmTitleIDColumn}, false);
@@ -433,10 +433,10 @@ namespace _3erExamenParcial {
                         this.tableProducers.ProducerIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableFilmTitlesProducer.ProducerIDColumn}, false);
             this.Relations.Add(this.relationProducers_FilmTitlesProducer);
-            this.relationFilmCertificates_FilmTitles = new global::System.Data.DataRelation("FilmCertificates_FilmTitles", new global::System.Data.DataColumn[] {
-                        this.tableFilmCertificates.CertificateIDColumn}, new global::System.Data.DataColumn[] {
+            this.relationFilmCertificate_FilmTitles = new global::System.Data.DataRelation("FilmCertificate_FilmTitles", new global::System.Data.DataColumn[] {
+                        this.tableFilmCertificate.CertificateIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableFilmTitles.FilmCertificateIDColumn}, false);
-            this.Relations.Add(this.relationFilmCertificates_FilmTitles);
+            this.Relations.Add(this.relationFilmCertificate_FilmTitles);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -454,12 +454,6 @@ namespace _3erExamenParcial {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeRoleTypes() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeFilmsActorRole() {
             return false;
         }
         
@@ -483,7 +477,13 @@ namespace _3erExamenParcial {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeFilmCertificates() {
+        private bool ShouldSerializeFilmActorRole() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeFilmCertificate() {
             return false;
         }
         
@@ -552,9 +552,6 @@ namespace _3erExamenParcial {
         public delegate void RoleTypesRowChangeEventHandler(object sender, RoleTypesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void FilmsActorRoleRowChangeEventHandler(object sender, FilmsActorRoleRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void FilmTitlesRowChangeEventHandler(object sender, FilmTitlesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -564,7 +561,10 @@ namespace _3erExamenParcial {
         public delegate void FilmTitlesProducerRowChangeEventHandler(object sender, FilmTitlesProducerRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void FilmCertificatesRowChangeEventHandler(object sender, FilmCertificatesRowChangeEvent e);
+        public delegate void FilmActorRoleRowChangeEventHandler(object sender, FilmActorRoleRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void FilmCertificateRowChangeEventHandler(object sender, FilmCertificateRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1405,327 +1405,6 @@ namespace _3erExamenParcial {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FilmsActorRoleDataTable : global::System.Data.TypedTableBase<FilmsActorRoleRow> {
-            
-            private global::System.Data.DataColumn columnFilmTitleID;
-            
-            private global::System.Data.DataColumn columnActorID;
-            
-            private global::System.Data.DataColumn columnRoleType;
-            
-            private global::System.Data.DataColumn columnCharacterName;
-            
-            private global::System.Data.DataColumn columnCharacterDescription;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleDataTable() {
-                this.TableName = "FilmsActorRole";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal FilmsActorRoleDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected FilmsActorRoleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FilmTitleIDColumn {
-                get {
-                    return this.columnFilmTitleID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ActorIDColumn {
-                get {
-                    return this.columnActorID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RoleTypeColumn {
-                get {
-                    return this.columnRoleType;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CharacterNameColumn {
-                get {
-                    return this.columnCharacterName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CharacterDescriptionColumn {
-                get {
-                    return this.columnCharacterDescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRow this[int index] {
-                get {
-                    return ((FilmsActorRoleRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event FilmsActorRoleRowChangeEventHandler FilmsActorRoleRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event FilmsActorRoleRowChangeEventHandler FilmsActorRoleRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event FilmsActorRoleRowChangeEventHandler FilmsActorRoleRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event FilmsActorRoleRowChangeEventHandler FilmsActorRoleRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddFilmsActorRoleRow(FilmsActorRoleRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRow AddFilmsActorRoleRow(int FilmTitleID, ActorsRow parentActorsRowByActors_FilmsActorRole, RoleTypesRow parentRoleTypesRowByRoleTypes_FilmsActorRole, string CharacterName, byte[] CharacterDescription) {
-                FilmsActorRoleRow rowFilmsActorRoleRow = ((FilmsActorRoleRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        FilmTitleID,
-                        null,
-                        null,
-                        CharacterName,
-                        CharacterDescription};
-                if ((parentActorsRowByActors_FilmsActorRole != null)) {
-                    columnValuesArray[1] = parentActorsRowByActors_FilmsActorRole[0];
-                }
-                if ((parentRoleTypesRowByRoleTypes_FilmsActorRole != null)) {
-                    columnValuesArray[2] = parentRoleTypesRowByRoleTypes_FilmsActorRole[0];
-                }
-                rowFilmsActorRoleRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFilmsActorRoleRow);
-                return rowFilmsActorRoleRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRow FindByFilmTitleID(int FilmTitleID) {
-                return ((FilmsActorRoleRow)(this.Rows.Find(new object[] {
-                            FilmTitleID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                FilmsActorRoleDataTable cln = ((FilmsActorRoleDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new FilmsActorRoleDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnFilmTitleID = base.Columns["FilmTitleID"];
-                this.columnActorID = base.Columns["ActorID"];
-                this.columnRoleType = base.Columns["RoleType"];
-                this.columnCharacterName = base.Columns["CharacterName"];
-                this.columnCharacterDescription = base.Columns["CharacterDescription"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnFilmTitleID = new global::System.Data.DataColumn("FilmTitleID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFilmTitleID);
-                this.columnActorID = new global::System.Data.DataColumn("ActorID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnActorID);
-                this.columnRoleType = new global::System.Data.DataColumn("RoleType", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRoleType);
-                this.columnCharacterName = new global::System.Data.DataColumn("CharacterName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCharacterName);
-                this.columnCharacterDescription = new global::System.Data.DataColumn("CharacterDescription", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCharacterDescription);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnFilmTitleID}, true));
-                this.columnFilmTitleID.AllowDBNull = false;
-                this.columnFilmTitleID.Unique = true;
-                this.columnCharacterName.MaxLength = 50;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRow NewFilmsActorRoleRow() {
-                return ((FilmsActorRoleRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FilmsActorRoleRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(FilmsActorRoleRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.FilmsActorRoleRowChanged != null)) {
-                    this.FilmsActorRoleRowChanged(this, new FilmsActorRoleRowChangeEvent(((FilmsActorRoleRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.FilmsActorRoleRowChanging != null)) {
-                    this.FilmsActorRoleRowChanging(this, new FilmsActorRoleRowChangeEvent(((FilmsActorRoleRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.FilmsActorRoleRowDeleted != null)) {
-                    this.FilmsActorRoleRowDeleted(this, new FilmsActorRoleRowChangeEvent(((FilmsActorRoleRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.FilmsActorRoleRowDeleting != null)) {
-                    this.FilmsActorRoleRowDeleting(this, new FilmsActorRoleRowChangeEvent(((FilmsActorRoleRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveFilmsActorRoleRow(FilmsActorRoleRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                bd ds = new bd();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FilmsActorRoleDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class FilmTitlesDataTable : global::System.Data.TypedTableBase<FilmTitlesRow> {
             
             private global::System.Data.DataColumn columnFilmTitleID;
@@ -1878,10 +1557,10 @@ namespace _3erExamenParcial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmTitlesRow AddFilmTitlesRow(FilmsActorRoleRow parentFilmsActorRoleRowByFilmsActorRole_FilmTitles, string FilmTitle, string FilmStory, System.DateTime FilmReleaseDate, int FilmDuration, FilmGenresRow parentFilmGenresRowByFilmGenres_FilmTitles, FilmCertificatesRow parentFilmCertificatesRowByFilmCertificates_FilmTitles, string FilmAditionalInfo) {
+            public FilmTitlesRow AddFilmTitlesRow(int FilmTitleID, string FilmTitle, string FilmStory, System.DateTime FilmReleaseDate, int FilmDuration, FilmGenresRow parentFilmGenresRowByFilmGenres_FilmTitles, FilmCertificateRow parentFilmCertificateRowByFilmCertificate_FilmTitles, string FilmAditionalInfo) {
                 FilmTitlesRow rowFilmTitlesRow = ((FilmTitlesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        FilmTitleID,
                         FilmTitle,
                         FilmStory,
                         FilmReleaseDate,
@@ -1889,14 +1568,11 @@ namespace _3erExamenParcial {
                         null,
                         null,
                         FilmAditionalInfo};
-                if ((parentFilmsActorRoleRowByFilmsActorRole_FilmTitles != null)) {
-                    columnValuesArray[0] = parentFilmsActorRoleRowByFilmsActorRole_FilmTitles[0];
-                }
                 if ((parentFilmGenresRowByFilmGenres_FilmTitles != null)) {
                     columnValuesArray[5] = parentFilmGenresRowByFilmGenres_FilmTitles[0];
                 }
-                if ((parentFilmCertificatesRowByFilmCertificates_FilmTitles != null)) {
-                    columnValuesArray[6] = parentFilmCertificatesRowByFilmCertificates_FilmTitles[0];
+                if ((parentFilmCertificateRowByFilmCertificate_FilmTitles != null)) {
+                    columnValuesArray[6] = parentFilmCertificateRowByFilmCertificate_FilmTitles[0];
                 }
                 rowFilmTitlesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFilmTitlesRow);
@@ -2665,16 +2341,22 @@ namespace _3erExamenParcial {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FilmCertificatesDataTable : global::System.Data.TypedTableBase<FilmCertificatesRow> {
+        public partial class FilmActorRoleDataTable : global::System.Data.TypedTableBase<FilmActorRoleRow> {
             
-            private global::System.Data.DataColumn columnCertificateID;
+            private global::System.Data.DataColumn columnFilmTitleID;
             
-            private global::System.Data.DataColumn columnCertificate;
+            private global::System.Data.DataColumn columnActorID;
+            
+            private global::System.Data.DataColumn columnRoleType;
+            
+            private global::System.Data.DataColumn columnCharacterName;
+            
+            private global::System.Data.DataColumn columnCharacterDescription;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmCertificatesDataTable() {
-                this.TableName = "FilmCertificates";
+            public FilmActorRoleDataTable() {
+                this.TableName = "FilmActorRole";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2682,7 +2364,7 @@ namespace _3erExamenParcial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal FilmCertificatesDataTable(global::System.Data.DataTable table) {
+            internal FilmActorRoleDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2699,7 +2381,316 @@ namespace _3erExamenParcial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected FilmCertificatesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FilmActorRoleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FilmTitleIDColumn {
+                get {
+                    return this.columnFilmTitleID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ActorIDColumn {
+                get {
+                    return this.columnActorID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn RoleTypeColumn {
+                get {
+                    return this.columnRoleType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CharacterNameColumn {
+                get {
+                    return this.columnCharacterName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CharacterDescriptionColumn {
+                get {
+                    return this.columnCharacterDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FilmActorRoleRow this[int index] {
+                get {
+                    return ((FilmActorRoleRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event FilmActorRoleRowChangeEventHandler FilmActorRoleRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event FilmActorRoleRowChangeEventHandler FilmActorRoleRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event FilmActorRoleRowChangeEventHandler FilmActorRoleRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event FilmActorRoleRowChangeEventHandler FilmActorRoleRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddFilmActorRoleRow(FilmActorRoleRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FilmActorRoleRow AddFilmActorRoleRow(FilmTitlesRow parentFilmTitlesRowByFilmTitles_FilmActorRole, ActorsRow parentActorsRowByActors_FilmActorRole, RoleTypesRow parentRoleTypesRowByRoleTypes_FilmActorRole, string CharacterName, string CharacterDescription) {
+                FilmActorRoleRow rowFilmActorRoleRow = ((FilmActorRoleRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        null,
+                        CharacterName,
+                        CharacterDescription};
+                if ((parentFilmTitlesRowByFilmTitles_FilmActorRole != null)) {
+                    columnValuesArray[0] = parentFilmTitlesRowByFilmTitles_FilmActorRole[0];
+                }
+                if ((parentActorsRowByActors_FilmActorRole != null)) {
+                    columnValuesArray[1] = parentActorsRowByActors_FilmActorRole[0];
+                }
+                if ((parentRoleTypesRowByRoleTypes_FilmActorRole != null)) {
+                    columnValuesArray[2] = parentRoleTypesRowByRoleTypes_FilmActorRole[0];
+                }
+                rowFilmActorRoleRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFilmActorRoleRow);
+                return rowFilmActorRoleRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                FilmActorRoleDataTable cln = ((FilmActorRoleDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new FilmActorRoleDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnFilmTitleID = base.Columns["FilmTitleID"];
+                this.columnActorID = base.Columns["ActorID"];
+                this.columnRoleType = base.Columns["RoleType"];
+                this.columnCharacterName = base.Columns["CharacterName"];
+                this.columnCharacterDescription = base.Columns["CharacterDescription"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnFilmTitleID = new global::System.Data.DataColumn("FilmTitleID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFilmTitleID);
+                this.columnActorID = new global::System.Data.DataColumn("ActorID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActorID);
+                this.columnRoleType = new global::System.Data.DataColumn("RoleType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRoleType);
+                this.columnCharacterName = new global::System.Data.DataColumn("CharacterName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCharacterName);
+                this.columnCharacterDescription = new global::System.Data.DataColumn("CharacterDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCharacterDescription);
+                this.columnFilmTitleID.AllowDBNull = false;
+                this.columnCharacterName.MaxLength = 50;
+                this.columnCharacterDescription.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FilmActorRoleRow NewFilmActorRoleRow() {
+                return ((FilmActorRoleRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new FilmActorRoleRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(FilmActorRoleRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.FilmActorRoleRowChanged != null)) {
+                    this.FilmActorRoleRowChanged(this, new FilmActorRoleRowChangeEvent(((FilmActorRoleRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.FilmActorRoleRowChanging != null)) {
+                    this.FilmActorRoleRowChanging(this, new FilmActorRoleRowChangeEvent(((FilmActorRoleRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.FilmActorRoleRowDeleted != null)) {
+                    this.FilmActorRoleRowDeleted(this, new FilmActorRoleRowChangeEvent(((FilmActorRoleRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.FilmActorRoleRowDeleting != null)) {
+                    this.FilmActorRoleRowDeleting(this, new FilmActorRoleRowChangeEvent(((FilmActorRoleRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveFilmActorRoleRow(FilmActorRoleRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                bd ds = new bd();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "FilmActorRoleDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class FilmCertificateDataTable : global::System.Data.TypedTableBase<FilmCertificateRow> {
+            
+            private global::System.Data.DataColumn columnCertificateID;
+            
+            private global::System.Data.DataColumn columnCertificate;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FilmCertificateDataTable() {
+                this.TableName = "FilmCertificate";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal FilmCertificateDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected FilmCertificateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2731,53 +2722,53 @@ namespace _3erExamenParcial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmCertificatesRow this[int index] {
+            public FilmCertificateRow this[int index] {
                 get {
-                    return ((FilmCertificatesRow)(this.Rows[index]));
+                    return ((FilmCertificateRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event FilmCertificatesRowChangeEventHandler FilmCertificatesRowChanging;
+            public event FilmCertificateRowChangeEventHandler FilmCertificateRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event FilmCertificatesRowChangeEventHandler FilmCertificatesRowChanged;
+            public event FilmCertificateRowChangeEventHandler FilmCertificateRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event FilmCertificatesRowChangeEventHandler FilmCertificatesRowDeleting;
+            public event FilmCertificateRowChangeEventHandler FilmCertificateRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event FilmCertificatesRowChangeEventHandler FilmCertificatesRowDeleted;
+            public event FilmCertificateRowChangeEventHandler FilmCertificateRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddFilmCertificatesRow(FilmCertificatesRow row) {
+            public void AddFilmCertificateRow(FilmCertificateRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmCertificatesRow AddFilmCertificatesRow(int CertificateID, string Certificate) {
-                FilmCertificatesRow rowFilmCertificatesRow = ((FilmCertificatesRow)(this.NewRow()));
+            public FilmCertificateRow AddFilmCertificateRow(int CertificateID, string Certificate) {
+                FilmCertificateRow rowFilmCertificateRow = ((FilmCertificateRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CertificateID,
                         Certificate};
-                rowFilmCertificatesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFilmCertificatesRow);
-                return rowFilmCertificatesRow;
+                rowFilmCertificateRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFilmCertificateRow);
+                return rowFilmCertificateRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmCertificatesRow FindByCertificateID(int CertificateID) {
-                return ((FilmCertificatesRow)(this.Rows.Find(new object[] {
+            public FilmCertificateRow FindByCertificateID(int CertificateID) {
+                return ((FilmCertificateRow)(this.Rows.Find(new object[] {
                             CertificateID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FilmCertificatesDataTable cln = ((FilmCertificatesDataTable)(base.Clone()));
+                FilmCertificateDataTable cln = ((FilmCertificateDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2785,7 +2776,7 @@ namespace _3erExamenParcial {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FilmCertificatesDataTable();
+                return new FilmCertificateDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2811,28 +2802,28 @@ namespace _3erExamenParcial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmCertificatesRow NewFilmCertificatesRow() {
-                return ((FilmCertificatesRow)(this.NewRow()));
+            public FilmCertificateRow NewFilmCertificateRow() {
+                return ((FilmCertificateRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FilmCertificatesRow(builder);
+                return new FilmCertificateRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FilmCertificatesRow);
+                return typeof(FilmCertificateRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FilmCertificatesRowChanged != null)) {
-                    this.FilmCertificatesRowChanged(this, new FilmCertificatesRowChangeEvent(((FilmCertificatesRow)(e.Row)), e.Action));
+                if ((this.FilmCertificateRowChanged != null)) {
+                    this.FilmCertificateRowChanged(this, new FilmCertificateRowChangeEvent(((FilmCertificateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2840,8 +2831,8 @@ namespace _3erExamenParcial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FilmCertificatesRowChanging != null)) {
-                    this.FilmCertificatesRowChanging(this, new FilmCertificatesRowChangeEvent(((FilmCertificatesRow)(e.Row)), e.Action));
+                if ((this.FilmCertificateRowChanging != null)) {
+                    this.FilmCertificateRowChanging(this, new FilmCertificateRowChangeEvent(((FilmCertificateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2849,8 +2840,8 @@ namespace _3erExamenParcial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FilmCertificatesRowDeleted != null)) {
-                    this.FilmCertificatesRowDeleted(this, new FilmCertificatesRowChangeEvent(((FilmCertificatesRow)(e.Row)), e.Action));
+                if ((this.FilmCertificateRowDeleted != null)) {
+                    this.FilmCertificateRowDeleted(this, new FilmCertificateRowChangeEvent(((FilmCertificateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2858,14 +2849,14 @@ namespace _3erExamenParcial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FilmCertificatesRowDeleting != null)) {
-                    this.FilmCertificatesRowDeleting(this, new FilmCertificatesRowChangeEvent(((FilmCertificatesRow)(e.Row)), e.Action));
+                if ((this.FilmCertificateRowDeleting != null)) {
+                    this.FilmCertificateRowDeleting(this, new FilmCertificateRowChangeEvent(((FilmCertificateRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveFilmCertificatesRow(FilmCertificatesRow row) {
+            public void RemoveFilmCertificateRow(FilmCertificateRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2892,7 +2883,7 @@ namespace _3erExamenParcial {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FilmCertificatesDataTable";
+                attribute2.FixedValue = "FilmCertificateDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3016,12 +3007,12 @@ namespace _3erExamenParcial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRow[] GetFilmsActorRoleRows() {
-                if ((this.Table.ChildRelations["Actors_FilmsActorRole"] == null)) {
-                    return new FilmsActorRoleRow[0];
+            public FilmActorRoleRow[] GetFilmActorRoleRows() {
+                if ((this.Table.ChildRelations["Actors_FilmActorRole"] == null)) {
+                    return new FilmActorRoleRow[0];
                 }
                 else {
-                    return ((FilmsActorRoleRow[])(base.GetChildRows(this.Table.ChildRelations["Actors_FilmsActorRole"])));
+                    return ((FilmActorRoleRow[])(base.GetChildRows(this.Table.ChildRelations["Actors_FilmActorRole"])));
                 }
             }
         }
@@ -3146,184 +3137,12 @@ namespace _3erExamenParcial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRow[] GetFilmsActorRoleRows() {
-                if ((this.Table.ChildRelations["RoleTypes_FilmsActorRole"] == null)) {
-                    return new FilmsActorRoleRow[0];
+            public FilmActorRoleRow[] GetFilmActorRoleRows() {
+                if ((this.Table.ChildRelations["RoleTypes_FilmActorRole"] == null)) {
+                    return new FilmActorRoleRow[0];
                 }
                 else {
-                    return ((FilmsActorRoleRow[])(base.GetChildRows(this.Table.ChildRelations["RoleTypes_FilmsActorRole"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class FilmsActorRoleRow : global::System.Data.DataRow {
-            
-            private FilmsActorRoleDataTable tableFilmsActorRole;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal FilmsActorRoleRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableFilmsActorRole = ((FilmsActorRoleDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int FilmTitleID {
-                get {
-                    return ((int)(this[this.tableFilmsActorRole.FilmTitleIDColumn]));
-                }
-                set {
-                    this[this.tableFilmsActorRole.FilmTitleIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ActorID {
-                get {
-                    try {
-                        return ((int)(this[this.tableFilmsActorRole.ActorIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ActorID\' de la tabla \'FilmsActorRole\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFilmsActorRole.ActorIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int RoleType {
-                get {
-                    try {
-                        return ((int)(this[this.tableFilmsActorRole.RoleTypeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RoleType\' de la tabla \'FilmsActorRole\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFilmsActorRole.RoleTypeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CharacterName {
-                get {
-                    try {
-                        return ((string)(this[this.tableFilmsActorRole.CharacterNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CharacterName\' de la tabla \'FilmsActorRole\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFilmsActorRole.CharacterNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public byte[] CharacterDescription {
-                get {
-                    try {
-                        return ((byte[])(this[this.tableFilmsActorRole.CharacterDescriptionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CharacterDescription\' de la tabla \'FilmsActorRole\' es DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFilmsActorRole.CharacterDescriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ActorsRow ActorsRow {
-                get {
-                    return ((ActorsRow)(this.GetParentRow(this.Table.ParentRelations["Actors_FilmsActorRole"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Actors_FilmsActorRole"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public RoleTypesRow RoleTypesRow {
-                get {
-                    return ((RoleTypesRow)(this.GetParentRow(this.Table.ParentRelations["RoleTypes_FilmsActorRole"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["RoleTypes_FilmsActorRole"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsActorIDNull() {
-                return this.IsNull(this.tableFilmsActorRole.ActorIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetActorIDNull() {
-                this[this.tableFilmsActorRole.ActorIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsRoleTypeNull() {
-                return this.IsNull(this.tableFilmsActorRole.RoleTypeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetRoleTypeNull() {
-                this[this.tableFilmsActorRole.RoleTypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCharacterNameNull() {
-                return this.IsNull(this.tableFilmsActorRole.CharacterNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCharacterNameNull() {
-                this[this.tableFilmsActorRole.CharacterNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCharacterDescriptionNull() {
-                return this.IsNull(this.tableFilmsActorRole.CharacterDescriptionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCharacterDescriptionNull() {
-                this[this.tableFilmsActorRole.CharacterDescriptionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmTitlesRow[] GetFilmTitlesRows() {
-                if ((this.Table.ChildRelations["FilmsActorRole_FilmTitles"] == null)) {
-                    return new FilmTitlesRow[0];
-                }
-                else {
-                    return ((FilmTitlesRow[])(base.GetChildRows(this.Table.ChildRelations["FilmsActorRole_FilmTitles"])));
+                    return ((FilmActorRoleRow[])(base.GetChildRows(this.Table.ChildRelations["RoleTypes_FilmActorRole"])));
                 }
             }
         }
@@ -3478,23 +3297,12 @@ namespace _3erExamenParcial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRow FilmsActorRoleRow {
+            public FilmCertificateRow FilmCertificateRow {
                 get {
-                    return ((FilmsActorRoleRow)(this.GetParentRow(this.Table.ParentRelations["FilmsActorRole_FilmTitles"])));
+                    return ((FilmCertificateRow)(this.GetParentRow(this.Table.ParentRelations["FilmCertificate_FilmTitles"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FilmsActorRole_FilmTitles"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmCertificatesRow FilmCertificatesRow {
-                get {
-                    return ((FilmCertificatesRow)(this.GetParentRow(this.Table.ParentRelations["FilmCertificates_FilmTitles"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FilmCertificates_FilmTitles"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FilmCertificate_FilmTitles"]);
                 }
             }
             
@@ -3580,6 +3388,17 @@ namespace _3erExamenParcial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFilmAditionalInfoNull() {
                 this[this.tableFilmTitles.FilmAditionalInfoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FilmActorRoleRow[] GetFilmActorRoleRows() {
+                if ((this.Table.ChildRelations["FilmTitles_FilmActorRole"] == null)) {
+                    return new FilmActorRoleRow[0];
+                }
+                else {
+                    return ((FilmActorRoleRow[])(base.GetChildRows(this.Table.ChildRelations["FilmTitles_FilmActorRole"])));
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3794,25 +3613,197 @@ namespace _3erExamenParcial {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FilmCertificatesRow : global::System.Data.DataRow {
+        public partial class FilmActorRoleRow : global::System.Data.DataRow {
             
-            private FilmCertificatesDataTable tableFilmCertificates;
+            private FilmActorRoleDataTable tableFilmActorRole;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal FilmCertificatesRow(global::System.Data.DataRowBuilder rb) : 
+            internal FilmActorRoleRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFilmCertificates = ((FilmCertificatesDataTable)(this.Table));
+                this.tableFilmActorRole = ((FilmActorRoleDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int FilmTitleID {
+                get {
+                    return ((int)(this[this.tableFilmActorRole.FilmTitleIDColumn]));
+                }
+                set {
+                    this[this.tableFilmActorRole.FilmTitleIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int ActorID {
+                get {
+                    try {
+                        return ((int)(this[this.tableFilmActorRole.ActorIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ActorID\' de la tabla \'FilmActorRole\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFilmActorRole.ActorIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int RoleType {
+                get {
+                    try {
+                        return ((int)(this[this.tableFilmActorRole.RoleTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RoleType\' de la tabla \'FilmActorRole\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFilmActorRole.RoleTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CharacterName {
+                get {
+                    try {
+                        return ((string)(this[this.tableFilmActorRole.CharacterNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CharacterName\' de la tabla \'FilmActorRole\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFilmActorRole.CharacterNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CharacterDescription {
+                get {
+                    try {
+                        return ((string)(this[this.tableFilmActorRole.CharacterDescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CharacterDescription\' de la tabla \'FilmActorRole\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableFilmActorRole.CharacterDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public ActorsRow ActorsRow {
+                get {
+                    return ((ActorsRow)(this.GetParentRow(this.Table.ParentRelations["Actors_FilmActorRole"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Actors_FilmActorRole"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public RoleTypesRow RoleTypesRow {
+                get {
+                    return ((RoleTypesRow)(this.GetParentRow(this.Table.ParentRelations["RoleTypes_FilmActorRole"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["RoleTypes_FilmActorRole"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FilmTitlesRow FilmTitlesRow {
+                get {
+                    return ((FilmTitlesRow)(this.GetParentRow(this.Table.ParentRelations["FilmTitles_FilmActorRole"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FilmTitles_FilmActorRole"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsActorIDNull() {
+                return this.IsNull(this.tableFilmActorRole.ActorIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetActorIDNull() {
+                this[this.tableFilmActorRole.ActorIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsRoleTypeNull() {
+                return this.IsNull(this.tableFilmActorRole.RoleTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetRoleTypeNull() {
+                this[this.tableFilmActorRole.RoleTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCharacterNameNull() {
+                return this.IsNull(this.tableFilmActorRole.CharacterNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCharacterNameNull() {
+                this[this.tableFilmActorRole.CharacterNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCharacterDescriptionNull() {
+                return this.IsNull(this.tableFilmActorRole.CharacterDescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCharacterDescriptionNull() {
+                this[this.tableFilmActorRole.CharacterDescriptionColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class FilmCertificateRow : global::System.Data.DataRow {
+            
+            private FilmCertificateDataTable tableFilmCertificate;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal FilmCertificateRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableFilmCertificate = ((FilmCertificateDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int CertificateID {
                 get {
-                    return ((int)(this[this.tableFilmCertificates.CertificateIDColumn]));
+                    return ((int)(this[this.tableFilmCertificate.CertificateIDColumn]));
                 }
                 set {
-                    this[this.tableFilmCertificates.CertificateIDColumn] = value;
+                    this[this.tableFilmCertificate.CertificateIDColumn] = value;
                 }
             }
             
@@ -3821,37 +3812,37 @@ namespace _3erExamenParcial {
             public string Certificate {
                 get {
                     try {
-                        return ((string)(this[this.tableFilmCertificates.CertificateColumn]));
+                        return ((string)(this[this.tableFilmCertificate.CertificateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Certificate\' de la tabla \'FilmCertificates\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Certificate\' de la tabla \'FilmCertificate\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFilmCertificates.CertificateColumn] = value;
+                    this[this.tableFilmCertificate.CertificateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCertificateNull() {
-                return this.IsNull(this.tableFilmCertificates.CertificateColumn);
+                return this.IsNull(this.tableFilmCertificate.CertificateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCertificateNull() {
-                this[this.tableFilmCertificates.CertificateColumn] = global::System.Convert.DBNull;
+                this[this.tableFilmCertificate.CertificateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public FilmTitlesRow[] GetFilmTitlesRows() {
-                if ((this.Table.ChildRelations["FilmCertificates_FilmTitles"] == null)) {
+                if ((this.Table.ChildRelations["FilmCertificate_FilmTitles"] == null)) {
                     return new FilmTitlesRow[0];
                 }
                 else {
-                    return ((FilmTitlesRow[])(base.GetChildRows(this.Table.ChildRelations["FilmCertificates_FilmTitles"])));
+                    return ((FilmTitlesRow[])(base.GetChildRows(this.Table.ChildRelations["FilmCertificate_FilmTitles"])));
                 }
             }
         }
@@ -3944,40 +3935,6 @@ namespace _3erExamenParcial {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public RoleTypesRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class FilmsActorRoleRowChangeEvent : global::System.EventArgs {
-            
-            private FilmsActorRoleRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRowChangeEvent(FilmsActorRoleRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmsActorRoleRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4098,22 +4055,56 @@ namespace _3erExamenParcial {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class FilmCertificatesRowChangeEvent : global::System.EventArgs {
+        public class FilmActorRoleRowChangeEvent : global::System.EventArgs {
             
-            private FilmCertificatesRow eventRow;
+            private FilmActorRoleRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmCertificatesRowChangeEvent(FilmCertificatesRow row, global::System.Data.DataRowAction action) {
+            public FilmActorRoleRowChangeEvent(FilmActorRoleRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FilmCertificatesRow Row {
+            public FilmActorRoleRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class FilmCertificateRowChangeEvent : global::System.EventArgs {
+            
+            private FilmCertificateRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FilmCertificateRowChangeEvent(FilmCertificateRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public FilmCertificateRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5143,436 +5134,6 @@ SELECT RoleTypeID, RoleType FROM RoleTypes WHERE (RoleTypeID = @RoleTypeID)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string RoleType, int Original_RoleTypeID, string Original_RoleType) {
             return this.Update(Original_RoleTypeID, RoleType, Original_RoleTypeID, Original_RoleType);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FilmsActorRoleTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public FilmsActorRoleTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FilmsActorRole";
-            tableMapping.ColumnMappings.Add("FilmTitleID", "FilmTitleID");
-            tableMapping.ColumnMappings.Add("ActorID", "ActorID");
-            tableMapping.ColumnMappings.Add("RoleType", "RoleType");
-            tableMapping.ColumnMappings.Add("CharacterName", "CharacterName");
-            tableMapping.ColumnMappings.Add("CharacterDescription", "CharacterDescription");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[FilmsActorRole] WHERE (([FilmTitleID] = @Original_FilmTitleID) AND ((@IsNull_ActorID = 1 AND [ActorID] IS NULL) OR ([ActorID] = @Original_ActorID)) AND ((@IsNull_RoleType = 1 AND [RoleType] IS NULL) OR ([RoleType] = @Original_RoleType)) AND ((@IsNull_CharacterName = 1 AND [CharacterName] IS NULL) OR ([CharacterName] = @Original_CharacterName)) AND ((@IsNull_CharacterDescription = 1 AND [CharacterDescription] IS NULL) OR ([CharacterDescription] = @Original_CharacterDescription)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FilmTitleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmTitleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RoleType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoleType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CharacterName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CharacterName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CharacterDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CharacterDescription", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[FilmsActorRole] ([FilmTitleID], [ActorID], [RoleType], [CharacterName], [CharacterDescription]) VALUES (@FilmTitleID, @ActorID, @RoleType, @CharacterName, @CharacterDescription);
-SELECT FilmTitleID, ActorID, RoleType, CharacterName, CharacterDescription FROM FilmsActorRole WHERE (FilmTitleID = @FilmTitleID)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FilmTitleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmTitleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CharacterName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CharacterDescription", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[FilmsActorRole] SET [FilmTitleID] = @FilmTitleID, [ActorID] = @ActorID, [RoleType] = @RoleType, [CharacterName] = @CharacterName, [CharacterDescription] = @CharacterDescription WHERE (([FilmTitleID] = @Original_FilmTitleID) AND ((@IsNull_ActorID = 1 AND [ActorID] IS NULL) OR ([ActorID] = @Original_ActorID)) AND ((@IsNull_RoleType = 1 AND [RoleType] IS NULL) OR ([RoleType] = @Original_RoleType)) AND ((@IsNull_CharacterName = 1 AND [CharacterName] IS NULL) OR ([CharacterName] = @Original_CharacterName)) AND ((@IsNull_CharacterDescription = 1 AND [CharacterDescription] IS NULL) OR ([CharacterDescription] = @Original_CharacterDescription)));
-SELECT FilmTitleID, ActorID, RoleType, CharacterName, CharacterDescription FROM FilmsActorRole WHERE (FilmTitleID = @FilmTitleID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FilmTitleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmTitleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CharacterName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CharacterDescription", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FilmTitleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmTitleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RoleType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoleType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CharacterName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CharacterName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CharacterDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CharacterDescription", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::_3erExamenParcial.Properties.Settings.Default.BAseConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT FilmTitleID, ActorID, RoleType, CharacterName, CharacterDescription FROM d" +
-                "bo.FilmsActorRole";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bd.FilmsActorRoleDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bd.FilmsActorRoleDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            bd.FilmsActorRoleDataTable dataTable = new bd.FilmsActorRoleDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(bd.FilmsActorRoleDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(bd dataSet) {
-            return this.Adapter.Update(dataSet, "FilmsActorRole");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_FilmTitleID, global::System.Nullable<int> Original_ActorID, global::System.Nullable<int> Original_RoleType, string Original_CharacterName, byte[] Original_CharacterDescription) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_FilmTitleID));
-            if ((Original_ActorID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_ActorID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Original_RoleType.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_RoleType.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CharacterName == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_CharacterName));
-            }
-            if ((Original_CharacterDescription == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((byte[])(Original_CharacterDescription));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int FilmTitleID, global::System.Nullable<int> ActorID, global::System.Nullable<int> RoleType, string CharacterName, byte[] CharacterDescription) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(FilmTitleID));
-            if ((ActorID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ActorID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((RoleType.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(RoleType.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((CharacterName == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CharacterName));
-            }
-            if ((CharacterDescription == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((byte[])(CharacterDescription));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int FilmTitleID, global::System.Nullable<int> ActorID, global::System.Nullable<int> RoleType, string CharacterName, byte[] CharacterDescription, int Original_FilmTitleID, global::System.Nullable<int> Original_ActorID, global::System.Nullable<int> Original_RoleType, string Original_CharacterName, byte[] Original_CharacterDescription) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(FilmTitleID));
-            if ((ActorID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ActorID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((RoleType.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(RoleType.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((CharacterName == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CharacterName));
-            }
-            if ((CharacterDescription == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((byte[])(CharacterDescription));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_FilmTitleID));
-            if ((Original_ActorID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ActorID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_RoleType.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_RoleType.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CharacterName == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_CharacterName));
-            }
-            if ((Original_CharacterDescription == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((byte[])(Original_CharacterDescription));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> ActorID, global::System.Nullable<int> RoleType, string CharacterName, byte[] CharacterDescription, int Original_FilmTitleID, global::System.Nullable<int> Original_ActorID, global::System.Nullable<int> Original_RoleType, string Original_CharacterName, byte[] Original_CharacterDescription) {
-            return this.Update(Original_FilmTitleID, ActorID, RoleType, CharacterName, CharacterDescription, Original_FilmTitleID, Original_ActorID, Original_RoleType, Original_CharacterName, Original_CharacterDescription);
         }
     }
     
@@ -6762,7 +6323,7 @@ SELECT ProducerID, ProducerName, ContactEmailAddress, Website FROM Producers WHE
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FilmCertificatesTableAdapter : global::System.ComponentModel.Component {
+    public partial class FilmActorRoleTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6776,7 +6337,7 @@ SELECT ProducerID, ProducerName, ContactEmailAddress, Website FROM Producers WHE
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public FilmCertificatesTableAdapter() {
+        public FilmActorRoleTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6873,31 +6434,289 @@ SELECT ProducerID, ProducerName, ContactEmailAddress, Website FROM Producers WHE
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FilmCertificates";
+            tableMapping.DataSetTable = "FilmActorRole";
+            tableMapping.ColumnMappings.Add("FilmTitleID", "FilmTitleID");
+            tableMapping.ColumnMappings.Add("ActorID", "ActorID");
+            tableMapping.ColumnMappings.Add("RoleType", "RoleType");
+            tableMapping.ColumnMappings.Add("CharacterName", "CharacterName");
+            tableMapping.ColumnMappings.Add("CharacterDescription", "CharacterDescription");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[FilmActorRole] ([FilmTitleID], [ActorID], [RoleType], [Charact" +
+                "erName], [CharacterDescription]) VALUES (@FilmTitleID, @ActorID, @RoleType, @Cha" +
+                "racterName, @CharacterDescription)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FilmTitleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FilmTitleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ActorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActorID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CharacterName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CharacterDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CharacterDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::_3erExamenParcial.Properties.Settings.Default.BAseConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT FilmTitleID, ActorID, RoleType, CharacterName, CharacterDescription FROM d" +
+                "bo.FilmActorRole";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(bd.FilmActorRoleDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual bd.FilmActorRoleDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            bd.FilmActorRoleDataTable dataTable = new bd.FilmActorRoleDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(bd.FilmActorRoleDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(bd dataSet) {
+            return this.Adapter.Update(dataSet, "FilmActorRole");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int FilmTitleID, global::System.Nullable<int> ActorID, global::System.Nullable<int> RoleType, string CharacterName, string CharacterDescription) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(FilmTitleID));
+            if ((ActorID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ActorID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((RoleType.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(RoleType.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((CharacterName == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CharacterName));
+            }
+            if ((CharacterDescription == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CharacterDescription));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class FilmCertificateTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public FilmCertificateTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "FilmCertificate";
             tableMapping.ColumnMappings.Add("CertificateID", "CertificateID");
             tableMapping.ColumnMappings.Add("Certificate", "Certificate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[FilmCertificates] WHERE (([CertificateID] = @Original_Certific" +
-                "ateID) AND ((@IsNull_Certificate = 1 AND [Certificate] IS NULL) OR ([Certificate" +
-                "] = @Original_Certificate)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[FilmCertificate] WHERE (([CertificateID] = @Original_Certifica" +
+                "teID) AND ((@IsNull_Certificate = 1 AND [Certificate] IS NULL) OR ([Certificate]" +
+                " = @Original_Certificate)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CertificateID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CertificateID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Certificate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Certificate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Certificate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Certificate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[FilmCertificates] ([CertificateID], [Certificate]) VALUES (@Ce" +
-                "rtificateID, @Certificate);\r\nSELECT CertificateID, Certificate FROM FilmCertific" +
-                "ates WHERE (CertificateID = @CertificateID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[FilmCertificate] ([CertificateID], [Certificate]) VALUES (@Cer" +
+                "tificateID, @Certificate);\r\nSELECT CertificateID, Certificate FROM FilmCertifica" +
+                "te WHERE (CertificateID = @CertificateID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CertificateID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CertificateID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Certificate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Certificate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[FilmCertificates] SET [CertificateID] = @CertificateID, [Certificate] = @Certificate WHERE (([CertificateID] = @Original_CertificateID) AND ((@IsNull_Certificate = 1 AND [Certificate] IS NULL) OR ([Certificate] = @Original_Certificate)));
-SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @CertificateID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[FilmCertificate] SET [CertificateID] = @CertificateID, [Certificate] = @Certificate WHERE (([CertificateID] = @Original_CertificateID) AND ((@IsNull_Certificate = 1 AND [Certificate] IS NULL) OR ([Certificate] = @Original_Certificate)));
+SELECT CertificateID, Certificate FROM FilmCertificate WHERE (CertificateID = @CertificateID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CertificateID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CertificateID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Certificate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Certificate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6919,7 +6738,7 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CertificateID, Certificate FROM dbo.FilmCertificates";
+            this._commandCollection[0].CommandText = "SELECT CertificateID, Certificate FROM dbo.FilmCertificate";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6927,7 +6746,7 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bd.FilmCertificatesDataTable dataTable) {
+        public virtual int Fill(bd.FilmCertificateDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6940,9 +6759,9 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bd.FilmCertificatesDataTable GetData() {
+        public virtual bd.FilmCertificateDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            bd.FilmCertificatesDataTable dataTable = new bd.FilmCertificatesDataTable();
+            bd.FilmCertificateDataTable dataTable = new bd.FilmCertificateDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6950,7 +6769,7 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(bd.FilmCertificatesDataTable dataTable) {
+        public virtual int Update(bd.FilmCertificateDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -6958,7 +6777,7 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(bd dataSet) {
-            return this.Adapter.Update(dataSet, "FilmCertificates");
+            return this.Adapter.Update(dataSet, "FilmCertificate");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7098,15 +6917,15 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         
         private RoleTypesTableAdapter _roleTypesTableAdapter;
         
-        private FilmsActorRoleTableAdapter _filmsActorRoleTableAdapter;
-        
         private FilmTitlesTableAdapter _filmTitlesTableAdapter;
         
         private ProducersTableAdapter _producersTableAdapter;
         
         private FilmTitlesProducerTableAdapter _filmTitlesProducerTableAdapter;
         
-        private FilmCertificatesTableAdapter _filmCertificatesTableAdapter;
+        private FilmActorRoleTableAdapter _filmActorRoleTableAdapter;
+        
+        private FilmCertificateTableAdapter _filmCertificateTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -7170,20 +6989,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public FilmsActorRoleTableAdapter FilmsActorRoleTableAdapter {
-            get {
-                return this._filmsActorRoleTableAdapter;
-            }
-            set {
-                this._filmsActorRoleTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public FilmTitlesTableAdapter FilmTitlesTableAdapter {
             get {
                 return this._filmTitlesTableAdapter;
@@ -7226,12 +7031,26 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public FilmCertificatesTableAdapter FilmCertificatesTableAdapter {
+        public FilmActorRoleTableAdapter FilmActorRoleTableAdapter {
             get {
-                return this._filmCertificatesTableAdapter;
+                return this._filmActorRoleTableAdapter;
             }
             set {
-                this._filmCertificatesTableAdapter = value;
+                this._filmActorRoleTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public FilmCertificateTableAdapter FilmCertificateTableAdapter {
+            get {
+                return this._filmCertificateTableAdapter;
+            }
+            set {
+                this._filmCertificateTableAdapter = value;
             }
         }
         
@@ -7266,10 +7085,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                             && (this._roleTypesTableAdapter.Connection != null))) {
                     return this._roleTypesTableAdapter.Connection;
                 }
-                if (((this._filmsActorRoleTableAdapter != null) 
-                            && (this._filmsActorRoleTableAdapter.Connection != null))) {
-                    return this._filmsActorRoleTableAdapter.Connection;
-                }
                 if (((this._filmTitlesTableAdapter != null) 
                             && (this._filmTitlesTableAdapter.Connection != null))) {
                     return this._filmTitlesTableAdapter.Connection;
@@ -7282,9 +7097,13 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                             && (this._filmTitlesProducerTableAdapter.Connection != null))) {
                     return this._filmTitlesProducerTableAdapter.Connection;
                 }
-                if (((this._filmCertificatesTableAdapter != null) 
-                            && (this._filmCertificatesTableAdapter.Connection != null))) {
-                    return this._filmCertificatesTableAdapter.Connection;
+                if (((this._filmActorRoleTableAdapter != null) 
+                            && (this._filmActorRoleTableAdapter.Connection != null))) {
+                    return this._filmActorRoleTableAdapter.Connection;
+                }
+                if (((this._filmCertificateTableAdapter != null) 
+                            && (this._filmCertificateTableAdapter.Connection != null))) {
+                    return this._filmCertificateTableAdapter.Connection;
                 }
                 return null;
             }
@@ -7308,9 +7127,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                 if ((this._roleTypesTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._filmsActorRoleTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._filmTitlesTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -7320,7 +7136,10 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                 if ((this._filmTitlesProducerTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._filmCertificatesTableAdapter != null)) {
+                if ((this._filmActorRoleTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._filmCertificateTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -7334,6 +7153,24 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(bd dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._filmGenresTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.FilmGenres.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._filmGenresTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._filmCertificateTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.FilmCertificate.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._filmCertificateTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._actorsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Actors.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -7349,33 +7186,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._roleTypesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._filmGenresTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.FilmGenres.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._filmGenresTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._filmsActorRoleTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.FilmsActorRole.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._filmsActorRoleTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._filmCertificatesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.FilmCertificates.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._filmCertificatesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7406,6 +7216,15 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._filmActorRoleTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.FilmActorRole.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._filmActorRoleTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -7416,6 +7235,22 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(bd dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._filmGenresTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.FilmGenres.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._filmGenresTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._filmCertificateTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.FilmCertificate.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._filmCertificateTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._actorsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Actors.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -7429,30 +7264,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._roleTypesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._filmGenresTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.FilmGenres.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._filmGenresTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._filmsActorRoleTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.FilmsActorRole.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._filmsActorRoleTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._filmCertificatesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.FilmCertificates.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._filmCertificatesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7480,6 +7291,14 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._filmActorRoleTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.FilmActorRole.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._filmActorRoleTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -7490,6 +7309,14 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(bd dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._filmActorRoleTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.FilmActorRole.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._filmActorRoleTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._filmTitlesProducerTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.FilmTitlesProducer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -7514,30 +7341,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._filmCertificatesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.FilmCertificates.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._filmCertificatesTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._filmsActorRoleTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.FilmsActorRole.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._filmsActorRoleTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._filmGenresTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.FilmGenres.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._filmGenresTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._roleTypesTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.RoleTypes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -7551,6 +7354,22 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._actorsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._filmCertificateTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.FilmCertificate.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._filmCertificateTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._filmGenresTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.FilmGenres.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._filmGenresTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -7608,11 +7427,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
-            if (((this._filmsActorRoleTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._filmsActorRoleTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
-                        "sma cadena de conexión.");
-            }
             if (((this._filmTitlesTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._filmTitlesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
@@ -7628,8 +7442,13 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
-            if (((this._filmCertificatesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._filmCertificatesTableAdapter.Connection) == false))) {
+            if (((this._filmActorRoleTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._filmActorRoleTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
+                        "sma cadena de conexión.");
+            }
+            if (((this._filmCertificateTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._filmCertificateTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -7692,15 +7511,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                         adaptersWithAcceptChangesDuringUpdate.Add(this._roleTypesTableAdapter.Adapter);
                     }
                 }
-                if ((this._filmsActorRoleTableAdapter != null)) {
-                    revertConnections.Add(this._filmsActorRoleTableAdapter, this._filmsActorRoleTableAdapter.Connection);
-                    this._filmsActorRoleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._filmsActorRoleTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._filmsActorRoleTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._filmsActorRoleTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._filmsActorRoleTableAdapter.Adapter);
-                    }
-                }
                 if ((this._filmTitlesTableAdapter != null)) {
                     revertConnections.Add(this._filmTitlesTableAdapter, this._filmTitlesTableAdapter.Connection);
                     this._filmTitlesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -7728,13 +7538,22 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                         adaptersWithAcceptChangesDuringUpdate.Add(this._filmTitlesProducerTableAdapter.Adapter);
                     }
                 }
-                if ((this._filmCertificatesTableAdapter != null)) {
-                    revertConnections.Add(this._filmCertificatesTableAdapter, this._filmCertificatesTableAdapter.Connection);
-                    this._filmCertificatesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._filmCertificatesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._filmCertificatesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._filmCertificatesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._filmCertificatesTableAdapter.Adapter);
+                if ((this._filmActorRoleTableAdapter != null)) {
+                    revertConnections.Add(this._filmActorRoleTableAdapter, this._filmActorRoleTableAdapter.Connection);
+                    this._filmActorRoleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._filmActorRoleTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._filmActorRoleTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._filmActorRoleTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._filmActorRoleTableAdapter.Adapter);
+                    }
+                }
+                if ((this._filmCertificateTableAdapter != null)) {
+                    revertConnections.Add(this._filmCertificateTableAdapter, this._filmCertificateTableAdapter.Connection);
+                    this._filmCertificateTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._filmCertificateTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._filmCertificateTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._filmCertificateTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._filmCertificateTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -7807,10 +7626,6 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                     this._roleTypesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._roleTypesTableAdapter]));
                     this._roleTypesTableAdapter.Transaction = null;
                 }
-                if ((this._filmsActorRoleTableAdapter != null)) {
-                    this._filmsActorRoleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._filmsActorRoleTableAdapter]));
-                    this._filmsActorRoleTableAdapter.Transaction = null;
-                }
                 if ((this._filmTitlesTableAdapter != null)) {
                     this._filmTitlesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._filmTitlesTableAdapter]));
                     this._filmTitlesTableAdapter.Transaction = null;
@@ -7823,9 +7638,13 @@ SELECT CertificateID, Certificate FROM FilmCertificates WHERE (CertificateID = @
                     this._filmTitlesProducerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._filmTitlesProducerTableAdapter]));
                     this._filmTitlesProducerTableAdapter.Transaction = null;
                 }
-                if ((this._filmCertificatesTableAdapter != null)) {
-                    this._filmCertificatesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._filmCertificatesTableAdapter]));
-                    this._filmCertificatesTableAdapter.Transaction = null;
+                if ((this._filmActorRoleTableAdapter != null)) {
+                    this._filmActorRoleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._filmActorRoleTableAdapter]));
+                    this._filmActorRoleTableAdapter.Transaction = null;
+                }
+                if ((this._filmCertificateTableAdapter != null)) {
+                    this._filmCertificateTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._filmCertificateTableAdapter]));
+                    this._filmCertificateTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

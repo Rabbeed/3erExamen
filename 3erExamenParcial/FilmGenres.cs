@@ -77,5 +77,13 @@ namespace _3erExamenParcial
         {
             this.button1.Enabled = true;
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            this.button1.Enabled = false;
+            this.Validate();
+            this.filmGenresBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bd);
+        }
     }
 }

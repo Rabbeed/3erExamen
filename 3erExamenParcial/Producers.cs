@@ -92,5 +92,13 @@ namespace _3erExamenParcial
             bindingNavigatorDeleteItem.Enabled = false;
             bindingNavigatorAddNewItem.Enabled = false;
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            this.button1.Enabled = false;
+            this.Validate();
+            this.producersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bd);
+        }
     }
 }

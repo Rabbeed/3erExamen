@@ -64,6 +64,9 @@ namespace _3erExamenParcial
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             this.button1.Enabled = false;
+            this.Validate();
+            this.roleTypesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bd);
         }
 
         private void roleTypesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

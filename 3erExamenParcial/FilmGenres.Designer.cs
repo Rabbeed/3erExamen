@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmGenres));
             System.Windows.Forms.Label genreIDLabel;
             System.Windows.Forms.Label genreLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmGenres));
             this.bd = new _3erExamenParcial.bd();
             this.filmGenresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filmGenresTableAdapter = new _3erExamenParcial.bdTableAdapters.FilmGenresTableAdapter();
@@ -56,6 +56,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.filmGenresDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // genreIDLabel
+            // 
+            genreIDLabel.AutoSize = true;
+            genreIDLabel.Location = new System.Drawing.Point(12, 44);
+            genreIDLabel.Name = "genreIDLabel";
+            genreIDLabel.Size = new System.Drawing.Size(53, 13);
+            genreIDLabel.TabIndex = 4;
+            genreIDLabel.Text = "Genre ID:";
+            // 
+            // genreLabel
+            // 
+            genreLabel.AutoSize = true;
+            genreLabel.Location = new System.Drawing.Point(12, 70);
+            genreLabel.Name = "genreLabel";
+            genreLabel.Size = new System.Drawing.Size(39, 13);
+            genreLabel.TabIndex = 6;
+            genreLabel.Text = "Genre:";
+            // 
             // bd
             // 
             this.bd.DataSetName = "bd";
@@ -74,9 +92,9 @@
             // 
             this.tableAdapterManager.ActorsTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.FilmCertificatesTableAdapter = null;
+            this.tableAdapterManager.FilmActorRoleTableAdapter = null;
+            this.tableAdapterManager.FilmCertificateTableAdapter = null;
             this.tableAdapterManager.FilmGenresTableAdapter = this.filmGenresTableAdapter;
-            this.tableAdapterManager.FilmsActorRoleTableAdapter = null;
             this.tableAdapterManager.FilmTitlesProducerTableAdapter = null;
             this.tableAdapterManager.FilmTitlesTableAdapter = null;
             this.tableAdapterManager.ProducersTableAdapter = null;
@@ -122,6 +140,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // filmGenresBindingNavigatorSaveItem
             // 
@@ -183,15 +202,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // genreIDLabel
-            // 
-            genreIDLabel.AutoSize = true;
-            genreIDLabel.Location = new System.Drawing.Point(12, 44);
-            genreIDLabel.Name = "genreIDLabel";
-            genreIDLabel.Size = new System.Drawing.Size(53, 13);
-            genreIDLabel.TabIndex = 4;
-            genreIDLabel.Text = "Genre ID:";
-            // 
             // genreIDTextBox
             // 
             this.genreIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.filmGenresBindingSource, "GenreID", true));
@@ -199,15 +209,6 @@
             this.genreIDTextBox.Name = "genreIDTextBox";
             this.genreIDTextBox.Size = new System.Drawing.Size(168, 20);
             this.genreIDTextBox.TabIndex = 5;
-            // 
-            // genreLabel
-            // 
-            genreLabel.AutoSize = true;
-            genreLabel.Location = new System.Drawing.Point(12, 70);
-            genreLabel.Name = "genreLabel";
-            genreLabel.Size = new System.Drawing.Size(39, 13);
-            genreLabel.TabIndex = 6;
-            genreLabel.Text = "Genre:";
             // 
             // genreTextBox
             // 

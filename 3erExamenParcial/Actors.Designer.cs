@@ -105,9 +105,9 @@
             // 
             this.tableAdapterManager.ActorsTableAdapter = this.actorsTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.FilmCertificatesTableAdapter = null;
+            this.tableAdapterManager.FilmCertificateTableAdapter = null;
             this.tableAdapterManager.FilmGenresTableAdapter = null;
-            this.tableAdapterManager.FilmsActorRoleTableAdapter = null;
+            this.tableAdapterManager.FilmActorRoleTableAdapter = null;
             this.tableAdapterManager.FilmTitlesProducerTableAdapter = null;
             this.tableAdapterManager.FilmTitlesTableAdapter = null;
             this.tableAdapterManager.ProducersTableAdapter = null;
